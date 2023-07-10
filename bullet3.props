@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ImportGroup Label="PropertySheets" />
+	
+	<PropertyGroup Label="UserMacros">
+		<MyConfig Condition="'$(Configuration)'=='Debug'">debug</MyConfig>
+		<MyConfig Condition="'$(Configuration)'!='Debug'">release</MyConfig>
+	</PropertyGroup>
+	
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>D:\dev2\bullet3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ClCompile>
+		<Link>
+			<AdditionalLibraryDirectories>D:\dev2\bullet3\lib\$(Platform)\$(MyConfig);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>
+				Bullet3Dynamics_vs2010_$(Platform)_$(MyConfig).lib;
+				BulletCollision_vs2010_$(Platform)_$(MyConfig).lib;
+				BulletDynamics_vs2010_$(Platform)_$(MyConfig).lib;
+				LinearMath_vs2010_$(Platform)_$(MyConfig).lib;
+				%(AdditionalDependencies)
+			</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	
+</Project>
