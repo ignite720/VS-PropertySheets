@@ -3,17 +3,19 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup>
-		<ThisLibraryDllPath>D:\dev2\libnoise\bin;</ThisLibraryDllPath>
-		<LocalDebuggerEnvironment>$(ThisLibraryDllPath)$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+		<LocalDebuggerEnvironment>PATH=D:\dev2\libnoise-1.0.0\lib\$(Platform);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	
 	<ItemDefinitionGroup>
 		<ClCompile>
-			<AdditionalIncludeDirectories>D:\dev2\libnoise\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>D:\dev2\libnoise-1.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 		</ClCompile>
 		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\libnoise\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<AdditionalDependencies>libnoise.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>D:\dev2\libnoise-1.0.0\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>
+				libnoise.lib;
+				%(AdditionalDependencies)
+			</AdditionalDependencies>
 		</Link>
 	</ItemDefinitionGroup>
 	
