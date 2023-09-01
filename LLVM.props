@@ -3,7 +3,7 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup>
-		<LocalDebuggerEnvironment>PATH=D:\dev2\LLVM\bin\$(Platform);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+		<LocalDebuggerEnvironment>PATH=D:\dev2\LLVM\bin;$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	
 	<ItemDefinitionGroup>
@@ -11,7 +11,7 @@
 			<AdditionalIncludeDirectories>D:\dev2\LLVM\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 		</ClCompile>
 		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\LLVM\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalLibraryDirectories>D:\dev2\LLVM\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
 				libclang.lib;
 				%(AdditionalDependencies)

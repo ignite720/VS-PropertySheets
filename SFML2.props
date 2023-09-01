@@ -3,7 +3,7 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup>
-		<LocalDebuggerEnvironment>PATH=D:\dev2\SFML-2.5.1-windows-vc15-32-bit\bin;$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+		<LocalDebuggerEnvironment>PATH=D:\dev2\SFML-2.5.1\bin\$(PlatformTarget);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	
 	<PropertyGroup Label="UserMacros">
@@ -14,10 +14,10 @@
 	<ItemDefinitionGroup>
 		<ClCompile>
 			<PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-			<AdditionalIncludeDirectories>D:\dev2\SFML-2.5.1-windows-vc15-32-bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>D:\dev2\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 		</ClCompile>
 		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\SFML-2.5.1-windows-vc15-32-bit\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalLibraryDirectories>D:\dev2\SFML-2.5.1\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
 				sfml-audio-s$(MyDebug).lib;
 				sfml-graphics-s$(MyDebug).lib;
