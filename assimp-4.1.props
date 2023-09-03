@@ -3,8 +3,8 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup Label="UserMacros">
-		<MyDebug Condition="'$(Configuration)'=='Debug'">d</MyDebug>
-		<MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
+		<Assimp41Config Condition="'$(Configuration)'=='Debug'">d</Assimp41Config>
+		<Assimp41Config Condition="'$(Configuration)'!='Debug'"></Assimp41Config>
 	</PropertyGroup>
 	
 	<PropertyGroup>
@@ -18,7 +18,7 @@
 		<Link>
 			<AdditionalLibraryDirectories>D:\dev2\assimp-4.1\lib\$(Platform)-$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
-				assimp-vc142-mt$(MyDebug).lib;
+				assimp-vc142-mt$(Assimp41Config).lib;
 				%(AdditionalDependencies)
 			</AdditionalDependencies>
 		</Link>

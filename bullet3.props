@@ -3,8 +3,8 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup Label="UserMacros">
-		<MyConfig Condition="'$(Configuration)'=='Debug'">debug</MyConfig>
-		<MyConfig Condition="'$(Configuration)'!='Debug'">release</MyConfig>
+		<Bullet3Config Condition="'$(Configuration)'=='Debug'">debug</Bullet3Config>
+		<Bullet3Config Condition="'$(Configuration)'!='Debug'">release</Bullet3Config>
 	</PropertyGroup>
 	
 	<ItemDefinitionGroup>
@@ -12,12 +12,12 @@
 			<AdditionalIncludeDirectories>D:\dev2\bullet3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 		</ClCompile>
 		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\bullet3\lib\$(Platform)\$(MyConfig);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalLibraryDirectories>D:\dev2\bullet3\lib\$(Platform)\$(Bullet3Config);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
-				Bullet3Dynamics_vs2010_$(Platform)_$(MyConfig).lib;
-				BulletCollision_vs2010_$(Platform)_$(MyConfig).lib;
-				BulletDynamics_vs2010_$(Platform)_$(MyConfig).lib;
-				LinearMath_vs2010_$(Platform)_$(MyConfig).lib;
+				Bullet3Dynamics_vs2010_$(Platform)_$(Bullet3Config).lib;
+				BulletCollision_vs2010_$(Platform)_$(Bullet3Config).lib;
+				BulletDynamics_vs2010_$(Platform)_$(Bullet3Config).lib;
+				LinearMath_vs2010_$(Platform)_$(Bullet3Config).lib;
 				%(AdditionalDependencies)
 			</AdditionalDependencies>
 		</Link>

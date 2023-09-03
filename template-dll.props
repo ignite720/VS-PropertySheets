@@ -6,13 +6,13 @@
 	Multiple directories can only be written on one line, otherwise visual studio may prompt that the DLL cannot be found.
 	
 	<PropertyGroup Label="UserMacros">
-		<MyDebug Condition="'$(Configuration)'=='Debug'">_d</MyDebug>
-		<MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
+		<TemplateDLLConfig Condition="'$(Configuration)'=='Debug'">_d</TemplateDLLConfig>
+		<TemplateDLLConfig Condition="'$(Configuration)'!='Debug'"></TemplateDLLConfig>
 	</PropertyGroup>
 	
 	<PropertyGroup Label="UserMacros">
-		<MyPlatform Condition="'$(Platform)'=='Win32'">x86</MyPlatform>
-		<MyPlatform Condition="'$(Platform)'=='x64'">x64</MyPlatform>
+		<TemplateDLLPlatform Condition="'$(Platform)'=='Win32'">x86</TemplateDLLPlatform>
+		<TemplateDLLPlatform Condition="'$(Platform)'=='x64'">x64</TemplateDLLPlatform>
 	</PropertyGroup>
 	-->
 	
@@ -27,7 +27,7 @@
 		<Link>
 			<AdditionalLibraryDirectories>D:\dev2\TemplateDLL\lib\$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
-				TemplateDLL-$(Platform)$(MyDebug).lib;
+				TemplateDLL-$(Platform)$(TemplateDLLConfig).lib;
 				%(AdditionalDependencies)
 			</AdditionalDependencies>
 		</Link>

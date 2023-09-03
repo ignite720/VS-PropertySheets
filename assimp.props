@@ -3,12 +3,12 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup Label="UserMacros">
-		<MyPF Condition="'$(Platform)'=='Win32'">Win32</MyPF>
-		<MyPF Condition="'$(Platform)'=='x64'">x64</MyPF>
+		<AssimpPlatform Condition="'$(Platform)'=='Win32'">Win32</AssimpPlatform>
+		<AssimpPlatform Condition="'$(Platform)'=='x64'">x64</AssimpPlatform>
 	</PropertyGroup>
 	
 	<PropertyGroup>
-		<LocalDebuggerEnvironment>PATH=D:\dev2\assimp-3.0.0\bin\$(MyPF);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+		<LocalDebuggerEnvironment>PATH=D:\dev2\assimp-3.0.0\bin\$(AssimpPlatform);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	
 	<ItemDefinitionGroup>

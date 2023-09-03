@@ -3,8 +3,8 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup Label="UserMacros">
-		<MyConfig Condition="'$(Configuration)'=='Debug'">DEBUG</MyConfig>
-		<MyConfig Condition="'$(Configuration)'=='Release'"></MyConfig>
+		<PhysX34Config Condition="'$(Configuration)'=='Debug'">DEBUG</PhysX34Config>
+		<PhysX34Config Condition="'$(Configuration)'=='Release'"></PhysX34Config>
 	</PropertyGroup>
 	
 	<PropertyGroup>
@@ -18,13 +18,13 @@
 		<Link>
 			<AdditionalLibraryDirectories>D:\dev2\PhysX_3.4\Lib\vc15win64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
-				PhysX3$(MyConfig)_x64.lib;
-				PhysX3CharacterKinematic$(MyConfig)_x64.lib;
-				PhysX3Common$(MyConfig)_x64.lib;
-				PhysX3Cooking$(MyConfig)_x64.lib;
-				PhysX3Extensions$(MyConfig).lib;
-				PxFoundation$(MyConfig)_x64.lib;
-				PxPvdSDK$(MyConfig)_x64.lib;
+				PhysX3$(PhysX34Config)_x64.lib;
+				PhysX3CharacterKinematic$(PhysX34Config)_x64.lib;
+				PhysX3Common$(PhysX34Config)_x64.lib;
+				PhysX3Cooking$(PhysX34Config)_x64.lib;
+				PhysX3Extensions$(PhysX34Config).lib;
+				PxFoundation$(PhysX34Config)_x64.lib;
+				PxPvdSDK$(PhysX34Config)_x64.lib;
 				%(AdditionalDependencies)
 			</AdditionalDependencies>
 		</Link>
