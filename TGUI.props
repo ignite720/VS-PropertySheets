@@ -10,10 +10,10 @@
 	<ItemDefinitionGroup>
 		<ClCompile>
 			<PreprocessorDefinitions>TGUI_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-			<AdditionalIncludeDirectories>D:\dev2\TGUI-0.9.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>D:\dev2\TGUI-0.9.5-VisualStudio-64bit-for-SFML-2.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
 		</ClCompile>
 		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\TGUI-0.9.5\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalLibraryDirectories>D:\dev2\TGUI-0.9.5-VisualStudio-64bit-for-SFML-2.6.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
 				tgui-s$(TGUIConfig).lib;
 				%(AdditionalDependencies)
