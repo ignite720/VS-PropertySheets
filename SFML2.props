@@ -2,13 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ImportGroup Label="PropertySheets" />
 	
-	<PropertyGroup>
-		<LocalDebuggerEnvironment>PATH=D:\dev2\SFML-2.6.0-windows-vc15\bin\$(PlatformTarget);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+	<PropertyGroup Label="UserMacros">
+		<SFML2Config Condition="'$(Configuration)'=='Debug'">-d</SFML2Config>
+		<SFML2Config Condition="'$(Configuration)'!='Debug'"></SFML2Config>
 	</PropertyGroup>
 	
-	<PropertyGroup Label="UserMacros">
-		<MyDebug Condition="'$(Configuration)'=='Debug'">-d</MyDebug>
-		<MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
+	<PropertyGroup>
+		<LocalDebuggerEnvironment>PATH=D:\dev2\SFML-2.6.0-windows-vc15\bin\$(PlatformTarget);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	
 	<ItemDefinitionGroup>
@@ -19,11 +19,11 @@
 		<Link>
 			<AdditionalLibraryDirectories>D:\dev2\SFML-2.6.0-windows-vc15\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 			<AdditionalDependencies>
-				sfml-audio-s$(MyDebug).lib;
-				sfml-graphics-s$(MyDebug).lib;
-				sfml-system-s$(MyDebug).lib;
-				sfml-window-s$(MyDebug).lib;
-				sfml-network-s$(MyDebug).lib;
+				sfml-audio-s$(SFML2Config).lib;
+				sfml-graphics-s$(SFML2Config).lib;
+				sfml-system-s$(SFML2Config).lib;
+				sfml-window-s$(SFML2Config).lib;
+				sfml-network-s$(SFML2Config).lib;
 				WS2_32.lib;
 				flac.lib;
 				freetype.lib;

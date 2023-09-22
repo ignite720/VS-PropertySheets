@@ -3,12 +3,12 @@
 	<ImportGroup Label="PropertySheets" />
 	
 	<PropertyGroup Label="UserMacros">
-		<MyPF Condition="'$(Platform)'=='Win32'">x86</MyPF>
-		<MyPF Condition="'$(Platform)'=='x64'">x64</MyPF>
+		<SDL1Platform Condition="'$(Platform)'=='Win32'">x86</SDL1Platform>
+		<SDL1Platform Condition="'$(Platform)'=='x64'">x64</SDL1Platform>
 	</PropertyGroup>
 	
 	<PropertyGroup>
-		<ThisLibDllDir>D:\dev2\SDL1\SDL-1.2.15\lib\$(MyPF);D:\dev2\SDL1\SDL_image-1.2.12\lib\$(MyPF);D:\dev2\SDL1\SDL_mixer-1.2.12\lib\$(MyPF);D:\dev2\SDL1\SDL_net-1.2.8\lib\$(MyPF);D:\dev2\SDL1\SDL_ttf-2.0.11\lib\$(MyPF);</ThisLibDllDir>
+		<ThisLibDllDir>D:\dev2\SDL1\SDL-1.2.15\lib\$(SDL1Platform);D:\dev2\SDL1\SDL_image-1.2.12\lib\$(SDL1Platform);D:\dev2\SDL1\SDL_mixer-1.2.12\lib\$(SDL1Platform);D:\dev2\SDL1\SDL_net-1.2.8\lib\$(SDL1Platform);D:\dev2\SDL1\SDL_ttf-2.0.11\lib\$(SDL1Platform);</ThisLibDllDir>
 		<LocalDebuggerEnvironment>PATH=$(ThisLibDllDir);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	
@@ -25,11 +25,11 @@
 		</ClCompile>
 		<Link>
 			<AdditionalLibraryDirectories>
-				D:\dev2\SDL1\SDL-1.2.15\lib\$(MyPF);
-				D:\dev2\SDL1\SDL_image-1.2.12\lib\$(MyPF);
-				D:\dev2\SDL1\SDL_mixer-1.2.12\lib\$(MyPF);
-				D:\dev2\SDL1\SDL_net-1.2.8\lib\$(MyPF);
-				D:\dev2\SDL1\SDL_ttf-2.0.11\lib\$(MyPF);
+				D:\dev2\SDL1\SDL-1.2.15\lib\$(SDL1Platform);
+				D:\dev2\SDL1\SDL_image-1.2.12\lib\$(SDL1Platform);
+				D:\dev2\SDL1\SDL_mixer-1.2.12\lib\$(SDL1Platform);
+				D:\dev2\SDL1\SDL_net-1.2.8\lib\$(SDL1Platform);
+				D:\dev2\SDL1\SDL_ttf-2.0.11\lib\$(SDL1Platform);
 				%(AdditionalLibraryDirectories)
 			</AdditionalLibraryDirectories>
 			
