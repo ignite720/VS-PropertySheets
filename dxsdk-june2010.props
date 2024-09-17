@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ImportGroup Label="PropertySheets" />
-	
-	<PropertyGroup Label="UserMacros">
-		<MyDebug Condition="'$(Configuration)'=='Debug'">d</MyDebug>
-		<MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
-		
-		<MyPlatform Condition="'$(Platform)'=='Win32'">x86</MyPlatform>
-		<MyPlatform Condition="'$(Platform)'=='x64'">x64</MyPlatform>
-		
-		<TestMyVariable Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></TestMyVariable>
-	</PropertyGroup>
-	
-	<PropertyGroup>
-		<ThisLibraryDllPath>D:\dev2\dxsdk-june2010\Bin\x86;</ThisLibraryDllPath>
-		<LocalDebuggerEnvironment>$(ThisLibraryDllPath)$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
-	</PropertyGroup>
-	
-	<ItemDefinitionGroup>
-		<ClCompile>
-			<AdditionalIncludeDirectories>D:\dev2\dxsdk-june2010\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-		</ClCompile>
-		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\dxsdk-june2010\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<!-- for dx9 -->
-			<AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-			
-			<!-- for dx11
-			<AdditionalDependencies>d3d11.lib;dxgi.lib;d3dx11$(MyDebug).lib;Effects11$(MyDebug).lib;dxerr$(MyDebug).lib;%(AdditionalDependencies)</AdditionalDependencies>
-			-->
-		</Link>
-	</ItemDefinitionGroup>
-	
+    <ImportGroup Label="PropertySheets" />
+    
+    <PropertyGroup Label="UserMacros">
+        <MyDebug Condition="'$(Configuration)'=='Debug'">d</MyDebug>
+        <MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
+        
+        <MyPlatform Condition="'$(Platform)'=='Win32'">x86</MyPlatform>
+        <MyPlatform Condition="'$(Platform)'=='x64'">x64</MyPlatform>
+        
+        <TestMyVariable Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></TestMyVariable>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <ThisLibraryDllPath>D:\dev2\dxsdk-june2010\Bin\x86;</ThisLibraryDllPath>
+        <LocalDebuggerEnvironment>$(ThisLibraryDllPath)$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+    </PropertyGroup>
+    
+    <ItemDefinitionGroup>
+        <ClCompile>
+            <AdditionalIncludeDirectories>D:\dev2\dxsdk-june2010\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+        </ClCompile>
+        <Link>
+            <AdditionalLibraryDirectories>D:\dev2\dxsdk-june2010\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <!-- for dx9 -->
+            <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            
+            <!-- for dx11
+            <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dx11$(MyDebug).lib;Effects11$(MyDebug).lib;dxerr$(MyDebug).lib;%(AdditionalDependencies)</AdditionalDependencies>
+            -->
+        </Link>
+    </ItemDefinitionGroup>
+    
 </Project>
