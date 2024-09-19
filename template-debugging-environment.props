@@ -3,7 +3,7 @@
     <ImportGroup Label="PropertySheets" />
     
     <PropertyGroup>
-        <LocalDebuggerEnvironment>PATH=D:\dev2\TemplateDLL\bin;$(SolutionDir)bin\debug;$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+        <LocalDebuggerEnvironment>PATH=D:\dev2\TemplateDLL\bin;$(SolutionDir)bin\$(Configuration);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
     </PropertyGroup>
     
 </Project>
