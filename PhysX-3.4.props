@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ImportGroup Label="PropertySheets" />
-	
-	<PropertyGroup Label="UserMacros">
-		<PhysX34Config Condition="'$(Configuration)'=='Debug'">DEBUG</PhysX34Config>
-		<PhysX34Config Condition="'$(Configuration)'=='Release'"></PhysX34Config>
-	</PropertyGroup>
-	
-	<PropertyGroup>
-		<LocalDebuggerEnvironment>PATH=D:\dev2\PhysX_3.4\Bin\vc15win64\$(Configuration);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
-	</PropertyGroup>
-	
-	<ItemDefinitionGroup>
-		<ClCompile>
-			<AdditionalIncludeDirectories>D:\dev2\PhysX_3.4\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-		</ClCompile>
-		<Link>
-			<AdditionalLibraryDirectories>D:\dev2\PhysX_3.4\Lib\vc15win64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<AdditionalDependencies>
-				PhysX3$(PhysX34Config)_x64.lib;
-				PhysX3CharacterKinematic$(PhysX34Config)_x64.lib;
-				PhysX3Common$(PhysX34Config)_x64.lib;
-				PhysX3Cooking$(PhysX34Config)_x64.lib;
-				PhysX3Extensions$(PhysX34Config).lib;
-				PxFoundation$(PhysX34Config)_x64.lib;
-				PxPvdSDK$(PhysX34Config)_x64.lib;
-				%(AdditionalDependencies)
-			</AdditionalDependencies>
-		</Link>
-	</ItemDefinitionGroup>
-	
+    <ImportGroup Label="PropertySheets" />
+    
+    <PropertyGroup Label="UserMacros">
+        <PhysX34Config Condition="'$(Configuration)'=='Debug'">DEBUG</PhysX34Config>
+        <PhysX34Config Condition="'$(Configuration)'=='Release'"></PhysX34Config>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <LocalDebuggerEnvironment>PATH=D:\dev2\PhysX_3.4\Bin\vc15win64\$(Configuration);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+    </PropertyGroup>
+    
+    <ItemDefinitionGroup>
+        <ClCompile>
+            <AdditionalIncludeDirectories>D:\dev2\PhysX_3.4\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+        </ClCompile>
+        <Link>
+            <AdditionalLibraryDirectories>D:\dev2\PhysX_3.4\Lib\vc15win64\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <AdditionalDependencies>
+                PhysX3$(PhysX34Config)_x64.lib;
+                PhysX3CharacterKinematic$(PhysX34Config)_x64.lib;
+                PhysX3Common$(PhysX34Config)_x64.lib;
+                PhysX3Cooking$(PhysX34Config)_x64.lib;
+                PhysX3Extensions$(PhysX34Config).lib;
+                PxFoundation$(PhysX34Config)_x64.lib;
+                PxPvdSDK$(PhysX34Config)_x64.lib;
+                %(AdditionalDependencies)
+            </AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+    
 </Project>

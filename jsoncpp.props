@@ -4,12 +4,12 @@
     
     <ItemDefinitionGroup>
         <ClCompile>
-            <AdditionalIncludeDirectories>D:\dev2\lua.5.3.5.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+            <AdditionalIncludeDirectories>D:\dev2\jsoncpp-1.9.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
         </ClCompile>
         <Link>
-            <AdditionalLibraryDirectories>D:\dev2\lua.5.3.5.2\lib\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <AdditionalLibraryDirectories>D:\dev2\jsoncpp-1.9.5\lib\$(PlatformTarget)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
             <AdditionalDependencies>
-                lua_static.lib;
+                jsoncpp.lib;
                 %(AdditionalDependencies)
             </AdditionalDependencies>
         </Link>
