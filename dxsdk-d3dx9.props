@@ -3,8 +3,8 @@
     <ImportGroup Label="PropertySheets" />
     
     <PropertyGroup Label="UserMacros">
-        <MyDebug Condition="'$(Configuration)'=='Debug'">d</MyDebug>
-        <MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
+        <DxsdkD3dx9Config Condition="'$(Configuration)'=='Debug'">d</DxsdkD3dx9Config>
+        <DxsdkD3dx9Config Condition="'$(Configuration)'!='Debug'"></DxsdkD3dx9Config>
     </PropertyGroup>
     
     <PropertyGroup>
@@ -17,7 +17,7 @@
         </ClCompile>
         <Link>
             <AdditionalLibraryDirectories>D:\dev2\dxsdk-d3dx-9.29.952.8\$(Configuration)\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-            <AdditionalDependencies>d3d9.lib;d3dx9$(MyDebug).lib;dinput8.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalDependencies>d3d9.lib;d3dx9$(DxsdkD3dx9Config).lib;d3dx10$(DxsdkD3dx9Config).lib;dinput8.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
         </Link>
     </ItemDefinitionGroup>
     

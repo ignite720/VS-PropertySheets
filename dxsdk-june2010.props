@@ -3,18 +3,17 @@
     <ImportGroup Label="PropertySheets" />
     
     <PropertyGroup Label="UserMacros">
-        <MyDebug Condition="'$(Configuration)'=='Debug'">d</MyDebug>
-        <MyDebug Condition="'$(Configuration)'!='Debug'"></MyDebug>
+        <DXSDKKJune2010Config Condition="'$(Configuration)'=='Debug'">d</DXSDKKJune2010Config>
+        <DXSDKKJune2010Config Condition="'$(Configuration)'!='Debug'"></DXSDKKJune2010Config>
         
-        <MyPlatform Condition="'$(Platform)'=='Win32'">x86</MyPlatform>
-        <MyPlatform Condition="'$(Platform)'=='x64'">x64</MyPlatform>
+        <DXSDKKJune2010Platform Condition="'$(Platform)'=='Win32'">x86</DXSDKKJune2010Platform>
+        <DXSDKKJune2010Platform Condition="'$(Platform)'=='x64'">x64</DXSDKKJune2010Platform>
         
         <TestMyVariable Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></TestMyVariable>
     </PropertyGroup>
     
     <PropertyGroup>
-        <ThisLibraryDllPath>D:\dev2\dxsdk-june2010\Bin\x86;</ThisLibraryDllPath>
-        <LocalDebuggerEnvironment>$(ThisLibraryDllPath)$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+        <LocalDebuggerEnvironment>PATH=D:\dev2\dxsdk-june2010\Developer Runtime\$(PlatformTarget);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
     </PropertyGroup>
     
     <ItemDefinitionGroup>
@@ -22,12 +21,12 @@
             <AdditionalIncludeDirectories>D:\dev2\dxsdk-june2010\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
         </ClCompile>
         <Link>
-            <AdditionalLibraryDirectories>D:\dev2\dxsdk-june2010\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <AdditionalLibraryDirectories>D:\dev2\dxsdk-june2010\Lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
             <!-- for dx9 -->
-            <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalDependencies>d3d9.lib;d3dx9$(DXSDKKJune2010Config).lib;d3dx10$(DXSDKKJune2010Config).lib;dinput8.lib;dsound.lib;DxErr.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
             
             <!-- for dx11
-            <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dx11$(MyDebug).lib;Effects11$(MyDebug).lib;dxerr$(MyDebug).lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dx11$(DXSDKKJune2010Config).lib;Effects11$(DXSDKKJune2010Config).lib;DxErr$(DXSDKKJune2010Config).lib;%(AdditionalDependencies)</AdditionalDependencies>
             -->
         </Link>
     </ItemDefinitionGroup>

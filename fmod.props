@@ -3,15 +3,16 @@
     <ImportGroup Label="PropertySheets" />
     
     <PropertyGroup>
-        <LocalDebuggerEnvironment>PATH=D:\dev2\fmod\lib\$(Platform);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
+        <LocalDebuggerEnvironment>PATH=D:\dev2\fmod-2.02\lib\$(PlatformTarget);$(LocalDebuggerEnvironment.Replace('PATH=', '').Replace('$(PATH)', '').Replace(';;', ';'))</LocalDebuggerEnvironment>
     </PropertyGroup>
     
+    <!-- fmodL_vc.lib, L => Logging -->
     <ItemDefinitionGroup>
         <ClCompile>
-            <AdditionalIncludeDirectories>D:\dev2\fmod\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+            <AdditionalIncludeDirectories>D:\dev2\fmod-2.02\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
         </ClCompile>
         <Link>
-            <AdditionalLibraryDirectories>D:\dev2\fmod\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <AdditionalLibraryDirectories>D:\dev2\fmod-2.02\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
             <AdditionalDependencies>
                 fmod_vc.lib;
                 %(AdditionalDependencies)
